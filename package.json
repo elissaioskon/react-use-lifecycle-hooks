@@ -55,7 +55,12 @@
     "prepublish": "yarn build"
   },
   "description": "Use declarative react lifecycle hooks e.g componentDidMount using useComponentDidMount hook instead of useEffect",
-  "keywords": ["useComponentDidMount", "react lifecycle hooks", "componentDidMount", "react-hooks"],
+  "keywords": [
+    "useComponentDidMount",
+    "react lifecycle hooks",
+    "componentDidMount",
+    "react-hooks"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

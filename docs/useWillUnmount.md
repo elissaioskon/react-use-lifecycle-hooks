@@ -12,7 +12,7 @@ const unSubscribeToUserStatus = () => {
    // A fn which unSubscribes to user Status 
 }
 
-const UserStatus = ({name}) => {
+const UserStatus = () => {
   useWillUnmount(unSubscribeToUserStatus)
   return null;
 };
@@ -26,10 +26,10 @@ const unSubscribeToUserStatus = () => {
    // A fn which unSubscribes to user Status 
 }
 
-const UserStatus = ({name}) => {
+const UserStatus = () => {
   useEffect(()=>{
     return () => unSubscribeToUserStatus()
-  },[name])
+  },[])
   return null;
 };
 ```

@@ -1,11 +1,11 @@
 # Lifecycle Hooks
 
-[![CircleCI](https://img.shields.io/circleci/build/gh/elissaioskon/react-use-lifecycle-hooks/master)](https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)(https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)
-[![Npm](https://img.shields.io/npm/v/react-use-lifecycle-hooks)](https://www.npmjs.com/package/react-use-lifecycle-hooks)  
-[![Codecov](https://img.shields.io/codecov/c/github/elissaioskon/lifecycle-hooks)](https://codecov.io/gh/elissaioskon/lifecycle-hooks)  
-[![Licence](https://img.shields.io/github/license/elissaioskon/react-use-lifecycle-hooks)](https://github.com/elissaioskon/lifecycle-hooks/blob/master/LICENSE)
->Use old react lifecycle hooks componentDidMount, componentDidUpdate etc with react hooks
-using useComponentDidMount, useComponentDidUpdate etc.
+[![CircleCI](https://img.shields.io/circleci/build/gh/elissaioskon/react-use-lifecycle-hooks/master)](https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)
+[![Npm](https://img.shields.io/npm/v/react-use-lifecycle-hooks)](https://www.npmjs.com/package/react-use-lifecycle-hooks) 
+[![Codecov](https://img.shields.io/codecov/c/github/elissaioskon/lifecycle-hooks)](https://codecov.io/gh/elissaioskon/lifecycle-hooks) 
+[![Licence](https://img.shields.io/github/license/elissaioskon/lifecycle-hooks)](https://github.com/elissaioskon/lifecycle-hooks/blob/master/LICENSE)
+>Use old react lifecycle hooks componentDidMount, componentDidUpdate etc with new react hooks api
+using useDidMount, useDidUpdate etc instead of using useEffect.
 
 ## Motivation
 
@@ -16,8 +16,9 @@ For this reason this library provides useDidMountAndWillUnmount, useDidUpdateAnd
 
 Using this library:
 ```jsx
-const UserStatus = ({name}) => {
+const UserStatus = () => {
     useComponentDidMount(subscribeToUserStatus)
+    return null
 }
 ```
 
@@ -27,16 +28,18 @@ const UserStatus = () => {
     useEffect(()=> {
        subscribeToUseStatus()
     },[])
+    
+    return null
 }
 ```  
 
 ### Install
 
 - Using yarn   
-    yarn add @elissaioskon/lifecycle-hooks  
+    yarn add react-use-lifecycle-hooks  
  
 - Using npm   
-    npm install @elissaioskon/lifecycle-hooks
+    npm install react-use-lifecycle-hooks  
  
 
 ### API

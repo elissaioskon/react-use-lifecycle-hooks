@@ -17,7 +17,7 @@ const unSubscribeToUserStatus = () => {
 }
 
 const UserStatus = () => {
-  useDidMountAndWillUnmount({mount: subscribeToUserStatus, unmount:unSubscribeToUserStatus})
+  useDidMountAndWillUnmount({onMount: subscribeToUserStatus, onUnmount:unSubscribeToUserStatus})
 
   return null;
 };
