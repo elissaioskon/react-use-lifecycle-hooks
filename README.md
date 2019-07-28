@@ -1,8 +1,8 @@
 # Lifecycle Hooks
 
 [![CircleCI](https://img.shields.io/circleci/build/gh/elissaioskon/react-use-lifecycle-hooks/master)](https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)(https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)
-[![Npm](https://img.shields.io/npm/v/@elissaioskon/react-use-lifecycle-hooks)](https://www.npmjs.com/package/react-use-lifecycle-hooks)
-[![Codecov](https://img.shields.io/codecov/c/github/elissaioskon/react-use-lifecycle-hook)](https://codecov.io/gh/elissaioskon/lifecycle-hooks)
+[![Npm](https://img.shields.io/npm/v/react-use-lifecycle-hooks)](https://www.npmjs.com/package/react-use-lifecycle-hooks)  
+[![Codecov](https://img.shields.io/codecov/c/github/elissaioskon/lifecycle-hooks)](https://codecov.io/gh/elissaioskon/lifecycle-hooks)  
 [![Licence](https://img.shields.io/github/license/elissaioskon/react-use-lifecycle-hooks)](https://github.com/elissaioskon/lifecycle-hooks/blob/master/LICENSE)
 >Use old react lifecycle hooks componentDidMount, componentDidUpdate etc with react hooks
 using useComponentDidMount, useComponentDidUpdate etc.
@@ -14,16 +14,10 @@ Using custom hooks of this library we can replace useEffect for most cases resul
 But we can use the same useEffect function for both declaring componentDidMount and componentWillUnmount.
 For this reason this library provides useDidMountAndWillUnmount, useDidUpdateAndWillUnmount hooks etc. 
 
-Please compare : 
-
 Using this library:
 ```jsx
-const UserStatus = () => {
-    useDidMountAndWillUnmount({
-       onMount: subscribeToUseStatus,
-       onUnmount: unSubscribeFromUserStatus
-    })
-
+const UserStatus = ({name}) => {
+    useComponentDidMount(subscribeToUserStatus)
 }
 ```
 
@@ -32,17 +26,18 @@ Using useEffect hook:
 const UserStatus = () => {
     useEffect(()=> {
        subscribeToUseStatus()
-       return () => unSubscribeFromUserStatus()
     },[])
-
 }
 ```  
 
 ### Install
 
-yarn add @elissaioskon/lifecycle-hooks  
- OR  
-npm install @elissaioskon/lifecycle-hooks
+- Using yarn   
+    yarn add @elissaioskon/lifecycle-hooks  
+ 
+- Using npm   
+    npm install @elissaioskon/lifecycle-hooks
+ 
 
 ### API
 
@@ -53,7 +48,8 @@ npm install @elissaioskon/lifecycle-hooks
 - [`useDidUpdate`](./docs/useDidUpdate.md) &mdash; same with componentDidUpdate 
 - [`useDidUpdateAndWillUnmount`](./docs/useDidUpdateAndWillUnmount.md) &mdash; same with componentDidUpdate & componentWillUnmount
 
- 
+`Every lifecycle hook can be used more than one time in the same function.`
+
 ### Prerequisites
  
 In order to use this library a React version **>=16.8.0** is required which introduce react hooks
