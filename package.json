@@ -1,8 +1,8 @@
 {
-  "name": "@elissaioskon/scrollable-list",
+  "name": "@elissaioskon/lifecycle-hooks",
   "version": "0.0.0-development",
   "main": "dist/index.js",
-  "repository": "https://github.com/elissaioskon/scrollable-list",
+  "repository": "https://github.com/elissaioskon/lifecycle-hooks",
   "author": "Elissaios Kon <elissaioskon@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -17,6 +17,7 @@
     "@semantic-release/github": "5.2.10",
     "@semantic-release/npm": "5.1.7",
     "@testing-library/react": "8.0.5",
+    "@testing-library/react-hooks": "1.1.0",
     "babel-jest": "24.8.0",
     "commitizen": "3.1.1",
     "cz-conventional-changelog": "2.1.0",
@@ -34,6 +35,7 @@
     "prettier": "1.17.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-test-renderer": "16.8.6",
     "rimraf": "2.6.3",
     "semantic-release": "^15.13.12"
   },
