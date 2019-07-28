@@ -11,6 +11,6 @@ describe('useDidMountAndUnmount hook', () => {
     expect(onUnmount).toHaveBeenCalledTimes(0);
 
     unmount();
-    // expect(onMount).toHaveBeenCalledTimes(1);
+    expect(onUnmount).toHaveBeenCalledTimes(1);
   });
 });
