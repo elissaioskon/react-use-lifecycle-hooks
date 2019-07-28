@@ -1,6 +1,6 @@
 {
   "hooks": {
      "pre-commit": "lint-staged",
-     "pre-push": "yarn test:branch",
+     "pre-push": "yarn test:branch --coverage",
   }
 }

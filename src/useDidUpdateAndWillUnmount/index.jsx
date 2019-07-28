@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 /* eslint-disable react-hooks/exhaustive-deps */
-const useDidUpdateAndUnmount = ({ onUpdate, toWatch = [], onUnmount }) => {
+const useDidUpdateAndWillUnmount = ({ onUpdate, toWatch = [], onUnmount }) => {
   useEffect(() => {
     onUpdate();
 
@@ -9,4 +9,4 @@ const useDidUpdateAndUnmount = ({ onUpdate, toWatch = [], onUnmount }) => {
   }, toWatch);
 };
 
-export default useDidUpdateAndUnmount;
+export default useDidUpdateAndWillUnmount;

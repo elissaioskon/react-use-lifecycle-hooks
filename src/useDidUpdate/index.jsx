@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
 /* eslint-disable react-hooks/exhaustive-deps */
-const useDidUpdate = (onUpdate, varsToWatch = []) => {
+const useDidUpdate = (onUpdate, toWatch = []) => {
   useEffect(() => {
     onUpdate();
-  }, varsToWatch);
+  }, toWatch);
 };
 
 export default useDidUpdate;

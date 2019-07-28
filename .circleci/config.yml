@@ -44,7 +44,8 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run: yarn lint
-      - run: yarn test --collectCoverage
+      - run: yarn test --coverage
+      - run: yarn codecov
 
       - persist_to_workspace:
           root: ~/repo

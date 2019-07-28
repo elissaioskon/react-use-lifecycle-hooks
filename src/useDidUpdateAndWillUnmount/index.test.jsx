@@ -1,15 +1,15 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import useDidUpdateAndUnmount from '.';
+import useDidUpdateAndWillUnmount from '.';
 
-describe('useDidUpdate hook', () => {
+describe('useDidUpdateAndWillUnmount hook', () => {
   it('should call onUpdate prop when a variable to watch changes', () => {
     const onUpdate = jest.fn();
     const onUnmount = jest.fn();
     let aVariableToWatch = 0;
 
     const { rerender } = renderHook(() =>
-      useDidUpdateAndUnmount({
+      useDidUpdateAndWillUnmount({
         onUpdate,
         toWatch: [aVariableToWatch],
         onUnmount

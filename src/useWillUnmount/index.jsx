@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 
 /* eslint-disable react-hooks/exhaustive-deps */
-const useDidMountAndUnmount = ({ onMount, onUnmount }) => {
+const useWillUnmount = onUnmount => {
   useEffect(() => {
-    onMount();
-
     return () => onUnmount();
   }, []);
 };
 
-export default useDidMountAndUnmount;
+export default useWillUnmount;
