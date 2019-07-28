@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import useDidUpdateAndUnmount from '.';
 
-describe('useDidUpdate hook', () => {
+describe('useDidUpdateAndUnmount hook', () => {
   it('should call onUpdate prop when a variable to watch changes', () => {
     const onUpdate = jest.fn();
     const onUnmount = jest.fn();
