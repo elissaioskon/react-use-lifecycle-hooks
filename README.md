@@ -15,7 +15,10 @@ But we can use the same useEffect function for both declaring componentDidMount 
 For this reason this library provides useDidMountAndWillUnmount, useDidUpdateAndWillUnmount hooks etc. 
 
 Using this library:
+
 ```jsx
+import {useComponentDidMount} from 'react-use-lifecycle-hooks'
+
 const UserStatus = () => {
     useComponentDidMount(subscribeToUserStatus)
     return null
@@ -32,6 +35,11 @@ const UserStatus = () => {
     return null
 }
 ```  
+<br>
+Also you can import every hook from its own file in order to not use every hook in your codebase.  
+      
+e.g: `import useComponentDidMount from 'react-use-lifecycle-hooks/dist/useComponentDidMount' `  
+<br>
 
 ### Install
 
