@@ -1,3 +1,11 @@
+
+****This library is DEPRECATED and no longer maintained****
+
+**Reason is:** 
+> The question is not "when does this effect run" the question is "with which state does this effect synchronize with"
+Please check the discussion [here](https://twitter.com/_developit/status/1124857230149312513)
+
+
 # Lifecycle Hooks
 
 [![CircleCI](https://img.shields.io/circleci/build/gh/elissaioskon/react-use-lifecycle-hooks/master)](https://circleci.com/gh/elissaioskon/lifecycle-hooks/tree/master)
