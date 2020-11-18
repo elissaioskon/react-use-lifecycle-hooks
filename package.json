@@ -35,7 +35,7 @@
     "react-dom": "16.8.6",
     "react-test-renderer": "16.8.6",
     "rimraf": "2.6.3",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^17.2.3"
   },
   "dependencies": {
     "@use-it/instance": "0.2.0",
